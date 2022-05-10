@@ -40,13 +40,15 @@ Opaque is non-Transparent and Holdin is non-Holdout. This is intended to make th
 - Holdout works correctly in EEVEE render engine, even if Film -> Transparent is disabled
   - this is useful for including HDRI backgrounds / environments in final composit
 - ViewLayer Transparent option is not currently available in EEVEE Render Engine
+- there may be some stability / memory available issues, this is being investigated
+  - any help is appreciated
 
 ## To Use this Addon
 To begin, press the 'Init ViewLayers' button first.
   - this will set up two separate ViewLayers for EEVEE and Cycles
   - 4 collections will be created (if they don't already exist), to help sort objects by render engine and visibility
 
-Next, press the Split Scene by Engine button.
+Next, press the 'Split Scene by Engine' button.
   - this creates two scenes, so that the ViewLayers can use different render engines
 
 Then sort objects in your scene into the different collections (the 4 created by the 'Init ViewLayers' button) as needed.
@@ -76,7 +78,7 @@ Each Render Engine can later be automatically assigned a separate ViewLayer in a
 
 ### View3D Tools - Split Scene by Engine button
 Use the 'Init ViewLayers' button BEFORE using this button.
-Initialize other scene, with the opposite rendering engine (based on option Cycles on Top).
+Initialize other scene, with the opposite rendering engine (based on option 'Cycles on Top').
 
 ### View3D Tools - Init Compositor button
 Initialize final compositor node tree for merging EEVEE and Cycles.
@@ -86,3 +88,5 @@ This button is usually not needed if the 'Init ViewLayers' and 'Split Scene by E
 Select a 'Material Output' node, and press this button. Output will be split, so the material will render as transparent in EEVEE and regular in Cycles.
 When this button is used, each selected Material Output (non-EEVEE Material Outputs only) will have a few nodes added to make the material render as Transparent (only to the camera) in EEVEE, while still rendering as regular in Cycles.
 This is a workaround because the Transparent option is not automatically available to collections in EEVEE.
+
+# Congratulations! You read me to the end.

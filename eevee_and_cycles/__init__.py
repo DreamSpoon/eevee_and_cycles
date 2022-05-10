@@ -24,6 +24,7 @@ bl_info = {
     "blender": (2, 80, 0),
     "location": "View 3D -> Tools -> EEVEEandC",
     "category": "Rendering",
+    "wiki_url": "https://github.com/DreamSpoon/eevee_and_cycles#readme",
 }
 
 import bpy
